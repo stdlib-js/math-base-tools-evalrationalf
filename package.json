@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-tools-evalrationalf",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Evaluate a rational function using single-precision floating-point arithmetic.",
   "license": "Apache-2.0 AND BSL-1.0",
   "author": {
