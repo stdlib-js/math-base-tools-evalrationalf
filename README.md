@@ -80,13 +80,18 @@ where `c_n, c_{n-1}, ..., c_0` are constants.
 ## Usage
 
 ```javascript
+import evalrationalf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrationalf@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-tools-evalrationalf/tags). For example,
+
+```javascript
 import evalrationalf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrationalf@v0.1.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrationalf@v0.1.0-esm/index.mjs';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrationalf@esm/index.mjs';
 ```
 
 #### evalrationalf( P, Q, x )
@@ -168,7 +173,7 @@ v = rational( 2.0 ); // => (20*2^0 + 8*2^1 + 3*2^2) / (10*2^0 + 9*2^1 + 1*2^2) =
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@esm/index.mjs';
-import evalrationalf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrationalf@v0.1.0-esm/index.mjs';
+import evalrationalf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrationalf@esm/index.mjs';
 
 // Create two arrays of random coefficients...
 var opts = {
