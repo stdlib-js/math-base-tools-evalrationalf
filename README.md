@@ -73,20 +73,32 @@ where `c_n, c_{n-1}, ..., c_0` are constants.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-tools-evalrationalf
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import evalrationalf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrationalf@deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrationalf@deno/mod.js';
+var evalrationalf = require( '@stdlib/math-base-tools-evalrationalf' );
 ```
 
 #### evalrationalf( P, Q, x )
@@ -94,7 +106,7 @@ import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-e
 Evaluates a [rational function][rational-function] at a value `x` using single-precision floating-point arithmetic.
 
 ```javascript
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
+var Float32Array = require( '@stdlib/array-float32' );
 
 var P = new Float32Array( [ -6.0, -5.0 ] );
 var Q = new Float32Array( [ 3.0, 0.5 ] );
@@ -106,7 +118,7 @@ var v = evalrationalf( P, Q, 6.0 ); // => ( -6*6^0 - 5*6^1 ) / ( 3*6^0 + 0.5*6^1
 For polynomials of different degree, the coefficient array for the lower degree [polynomial][polynomial] should be padded with zeros.
 
 ```javascript
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
+var Float32Array = require( '@stdlib/array-float32' );
 
 // 2x^3 + 4x^2 - 5x^1 - 6x^0 => degree 4
 var P = new Float32Array( [ -6.0, -5.0, 4.0, 2.0 ] );
@@ -125,7 +137,7 @@ Coefficients should be ordered in **ascending** degree, thus matching summation 
 Uses code generation to in-line coefficients and return a function for evaluating a [rational function][rational-function] using single-precision floating-point arithmetic.
 
 ```javascript
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
+var Float32Array = require( '@stdlib/array-float32' );
 
 var P = new Float32Array( [ 20.0, 8.0, 3.0 ] );
 var Q = new Float32Array( [ 10.0, 9.0, 1.0 ] );
@@ -161,9 +173,9 @@ v = rational( 2.0 ); // => (20*2^0 + 8*2^1 + 3*2^2) / (10*2^0 + 9*2^1 + 1*2^2) =
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@deno/mod.js';
-import evalrationalf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrationalf@deno/mod.js';
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var uniform = require( '@stdlib/random-base-uniform' );
+var evalrationalf = require( '@stdlib/math-base-tools-evalrationalf' );
 
 // Create two arrays of random coefficients...
 var opts = {
@@ -209,7 +221,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -221,7 +233,7 @@ For more information on the project, filing bug reports and feature requests, an
 
 ## Copyright
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -247,8 +259,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
